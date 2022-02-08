@@ -2,7 +2,7 @@
 
 require "hanami/action"
 
-module AppPrototype
+module Version
   class Action < Hanami::Action
   end
 end

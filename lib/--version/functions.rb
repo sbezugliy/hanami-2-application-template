@@ -2,7 +2,7 @@
 
 require "dry/transformer"
 
-module AppPrototype
+module Version
   module Functions
     extend Dry::Transformer::Registry
 

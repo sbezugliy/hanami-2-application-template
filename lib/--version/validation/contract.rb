@@ -3,7 +3,7 @@
 require "dry/validation"
 require "dry/schema/messages/i18n"
 
-module AppPrototype
+module Version
   module Validation
     class Contract < Dry::Validation::Contract
       config.messages.backend = :i18n

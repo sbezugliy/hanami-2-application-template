@@ -20,7 +20,7 @@ Hanami.application.register_provider :persistence, namespace: true do
 
   start do
     config = target["persistence.config"]
-    config.auto_registration target.root.join("lib/app_prototype/persistence")
+    config.auto_registration target.root.join("lib/__version/persistence")
 
     register "rom", ROM.container(config)
   end

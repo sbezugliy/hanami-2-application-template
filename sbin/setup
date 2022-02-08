@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# script/setup: Set up application for the first time after cloning, or set it
+# sbin/setup: Set up application for the first time after cloning, or set it
 # back to the initial first unused state.
 
 set -e
@@ -11,12 +11,12 @@ if [ ! -f ".env" ]; then
 fi
 
 if [ "$1" == "docker" ]; then
-  script/bootstrap docker
+  sbin/bootstrap docker
   docker-compose up
 else
   cd "$(dirname "$0")/.."
 
-  script/bootstrap
+  sbin/bootstrap
 
   echo "==> Setting up database..."
   bin/hanami db setup

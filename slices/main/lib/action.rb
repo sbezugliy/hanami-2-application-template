@@ -1,9 +1,9 @@
 # auto_register: false
 # frozen_string_literal: true
 
-require "app_prototype/action"
+require "__version/action"
 
 module Main
-  class Action < AppPrototype::Action
+  class Action < Version::Action
   end
 end

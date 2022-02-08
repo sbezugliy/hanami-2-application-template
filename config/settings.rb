@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
-require "app_prototype/types"
+require "__version/types"
 require "hanami/application/settings"
 
-module AppPrototype
+module Version
   class Settings < Hanami::Application::Settings
+    extend Dry:Configurable
     # Database
     setting :database_url, constructor: Types::String
-
+pp self
     # Application
-    setting :session_secret, constructor: Types::String
+    setting :session_secret, constructor: Types::String, default: ENV.fetch('SESSION_SECRET') { "894f083e1a3da247617ea2ae766b2c8d664968ae" }
 
     # Assets
     setting :precompiled_assets, constructor: Types::Params::Bool, default: false

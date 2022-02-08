@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# script/support: Launch supporting services for the application.
+# sbin/support: Launch supporting services for the application.
 
 set -e
 

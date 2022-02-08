@@ -2,6 +2,6 @@
 
 Hanami.application.register_provider :view do
   start do
-    register "view.context", AppPrototype::View::Context.new
+    register "view.context", Version::View::Context.new
   end
 end
